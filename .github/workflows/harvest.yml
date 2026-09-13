@@ -1,0 +1,70 @@
+name: Monthly RTB decision harvest
+
+on:
+  schedule:
+    # 3rd of each month, 10:23 UTC = 03:23 PDT / 02:23 PST.
+    - cron: "23 10 3 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: harvest
+  cancel-in-progress: false
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Tests
+        run: uv run pytest -q
+
+      - name: Harvest
+        id: harvest
+        run: uv run python -m rtb.run --status-file .cache/status.json
+
+      - name: Commit results
+        if: success()
+        run: |
+          git config user.name "rtb-harvest[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data runs README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Harvest $(jq -r .run_id .cache/status.json): $(jq -r .total .cache/status.json) decisions ($(jq -r .status .cache/status.json))"
+            git push
+          fi
+
+      - name: Open issue on failure or warnings
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -f .cache/status.json ]; then
+            status=$(jq -r .status .cache/status.json)
+          else
+            status=crashed
+          fi
+          [ "$status" = "ok" ] && exit 0
+          body_file=$(mktemp)
+          if [ -f .cache/summary.md ]; then cat .cache/summary.md > "$body_file"; else echo "The harvest crashed before producing a summary." > "$body_file"; fi
+          printf '\n\n---\nWorkflow run: %s\n' "$RUN_URL" >> "$body_file"
+          gh label create harvest --color C5DEF5 --description "Automated harvest alerts" 2>/dev/null || true
+          gh issue create \
+            --title "Harvest $status: $(date -u +%Y-%m-%d)" \
+            --label harvest \
+            --body-file "$body_file"

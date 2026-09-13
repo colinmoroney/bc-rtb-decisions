@@ -1,0 +1,705 @@
+{
+ "_source": "RTB PostedDecisions site config issues_config (https://tenancydispute.gov.bc.ca/PostedDecisions/config/d4d824f74f1384ac690264130f86ea32.json), retrieved 2026-09-12",
+ "codes": {
+  "101": {
+   "acronym": "OPE",
+   "title": "I issued a One Month Notice to end tenancy for end of employment and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "102": {
+   "acronym": "OPR",
+   "title": "I issued a 10 Day Notice to End Tenancy for Unpaid Rent not paid in the required time and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "103": {
+   "acronym": "OPL",
+   "title": "I issued a Two Month Notice to End Tenancy for Landlord's Use of Property and I want an order of possession",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "104": {
+   "acronym": "OPC",
+   "title": "I issued a One Month Notice to end tenancy for cause (not end of employment) and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "105": {
+   "acronym": "OPQ",
+   "title": "I issued a Two Month Notice to End Tenancy - Tenant Does Not Qualify for Subsidized Rental Unit - and I want an order of possession",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "106": {
+   "acronym": "OPB",
+   "title": "The tenancy agreement states the tenant will vacate the rental unit or site at the end of the fixed term and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "107": {
+   "acronym": "MNDL",
+   "title": "I want compensation for damage caused by the tenant, their pets or guests to the unit, site or property ",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "108": {
+   "acronym": "MNRL",
+   "title": "I want to recover the money for the unpaid rent and/or utilities",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "110": {
+   "acronym": "MNDCL",
+   "title": "I want compensation for my monetary loss or other money owed",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "111": {
+   "acronym": "FFL",
+   "title": "I want to include a request for the tenant to pay me back for the cost of the filing fee",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "113": {
+   "acronym": "ET",
+   "title": "This is an application for an early end to the tenancy as it would be unreasonable, or unfair to the landlord or other occupants to wait for a Notice to End Tenancy for Cause to take effect",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "114": {
+   "acronym": "OL",
+   "title": "I have another issue that is not listed",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "122": {
+   "acronym": "OPU",
+   "title": "I issued a 10 Day Notice to End Tenancy for Unpaid Utilities (and Rent) not paid in the required time and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "123": {
+   "acronym": "OPR-DR",
+   "title": "I issued a 10 Day Notice to End Tenancy for unpaid rent not paid in the required time and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "124": {
+   "acronym": "OPU-DR",
+   "title": "I issued a 10 Day Notice to End Tenancy for rent and/or utilities not paid in the required time and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "125": {
+   "acronym": "MNR-DR",
+   "title": "I issued a 10 Day Notice to End Tenancy and I want a monetary order in addition to an order of possession for rent not paid in the required time",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "126": {
+   "acronym": "MNU-DR",
+   "title": "I issued a 10 Day Notice to End Tenancy and I want a monetary order in addition to an order of possession for rent and/or utilities not paid in the required time",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "127": {
+   "acronym": "MNDL-S",
+   "title": "I want the tenant to pay to repair the damage that they, their pets or their guests caused during their tenancy - request to retain security and/or pet damage deposit",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "128": {
+   "acronym": "MNRL-S",
+   "title": "I want to recover the money for the unpaid rent and/or utilities - request to retain security and/or pet damage deposit",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "129": {
+   "acronym": "MNDCL-S",
+   "title": "I want compensation for my monetary loss or other money owed - request to retain security and/or pet damage deposit",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "130": {
+   "acronym": "OPLC",
+   "title": "I issued a 12 Month Notice to End Tenancy for Conversion of Manufactured Home Park",
+   "applicant": "landlord",
+   "act": "mhpta",
+   "tenancy_status": "current"
+  },
+  "131": {
+   "acronym": "OPL-4M",
+   "title": "I issued a Four Month Notice to End Tenancy for Demolition or Conversion of a Rental Unit",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "132": {
+   "acronym": "OFL",
+   "title": "The rental unit or site is uninhabitable, or the tenancy agreement is frustrated and I want an Order of Possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "133": {
+   "acronym": "ORL",
+   "title": "I want an Order for my tenant(s) to follow Manufactured Home Park rules",
+   "applicant": "landlord",
+   "act": "mhpta",
+   "tenancy_status": "both"
+  },
+  "134": {
+   "acronym": "ARI-E",
+   "title": "Additional Rent Increase - Expenses",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "135": {
+   "acronym": "ARI-C",
+   "title": "The landlord has eligible capital expenditures and is seeking an additional rent increase",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "136": {
+   "acronym": "OLRD",
+   "title": "The arbitrator is awarding the tenant the return of their deposit(s) on a landlord application",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "past"
+  },
+  "137": {
+   "acronym": "OPR-DR-PP",
+   "title": "I issued a 10 Day Notice to End Tenancy for Unpaid Rent (with repayment plan) that was not paid in the required time and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "138": {
+   "acronym": "OPU-DR-PP",
+   "title": "I issued a 10 Day Notice to End Tenancy for Unpaid Rent and/or Utilities (with repayment plan) that was not paid in the required time and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "139": {
+   "acronym": "OPR-PP",
+   "title": "I issued a 10 Day Notice to End Tenancy for Unpaid Rent (with repayment plan) that was not paid in the required time and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "140": {
+   "acronym": "OPU-PP",
+   "title": "I issued a 10 Day Notice to End Tenancy for Unpaid Rent and/or Utilities (with repayment plan) that was not paid in the required time and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "141": {
+   "acronym": "PFR",
+   "title": "The landlord is seeking vacant possession of the rental unit to perform renovations or repairs",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "142": {
+   "acronym": "LRSD",
+   "title": "I want to retain all or a part of the tenant's security and/or pet damage deposit",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "143": {
+   "acronym": "OPC-DR",
+   "title": "I issued a One Month Notice to end tenancy for cause (not end of employment) and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "144": {
+   "acronym": "OPE-DR",
+   "title": "I issued a One Month Notice to end tenancy for end of employment and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "145": {
+   "acronym": "OPQ-DR",
+   "title": "I issued a Two Month Notice to End Tenancy - Tenant Does Not Qualify for Subsidized Rental Unit - and I want an order of possession",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "146": {
+   "acronym": "OPL-4M-DR",
+   "title": "I issued a Four Month Notice to End Tenancy for Demolition or Conversion of a Rental Unit",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "148": {
+   "acronym": "OPLU",
+   "title": "I issued a Four Month Notice to End Tenancy for Landlord's Use of Property and I want an order of possession",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "149": {
+   "acronym": "OPLU-C",
+   "title": "I issued a Four Month Notice to End Tenancy for Use of Property by a Caretaker, Manager or Superintendent",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "150": {
+   "acronym": "OPLU-P",
+   "title": "I issued a Three Month Notice to End Tenancy for Purchaser's Use of Property and I want an order of possession",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "151": {
+   "acronym": "OPLU-3M",
+   "title": "I issued a Three Month Notice to End Tenancy for Landlord's Use of Property and I want an order of possession",
+   "applicant": "landlord",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "152": {
+   "acronym": "SMNT",
+   "title": "The parties agreed the Landlord will pay compensation to the Tenant",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "153": {
+   "acronym": "SOPT",
+   "title": "The parties agreed the Landlord will give occupancy of the rental unit or site to the Tenant",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "154": {
+   "acronym": "SOTHT",
+   "title": "The parties agreed the Landlord will comply with the Tenant’s requested terms",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "201": {
+   "acronym": "MT",
+   "title": "I am filing this application after the dispute period indicated on the notice and I am requesting more time to file the application",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "202": {
+   "acronym": "DRI",
+   "title": "I want to dispute a rent increase that is above the amount allowed by law",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "203": {
+   "acronym": "CNQ",
+   "title": "I want to dispute a Two Month Notice to End Tenancy Issued Because Tenant Does Not Qualify for Subsidized Rental Unit",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "204": {
+   "acronym": "CNE",
+   "title": "I want to dispute a One Month Notice to End Tenancy for end of employment",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "205": {
+   "acronym": "CNC",
+   "title": "I want to dispute a One Month Notice to End Tenancy for cause",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "206": {
+   "acronym": "CNLC",
+   "title": "I want to dispute a 12 Month Notice to End Tenancy for Conversion of Manufactured Home Park",
+   "applicant": "tenant",
+   "act": "mhpta",
+   "tenancy_status": "current"
+  },
+  "207": {
+   "acronym": "CNL",
+   "title": "I want to dispute a Two Month Notice to End Tenancy for Landlord's Use of Property",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "208": {
+   "acronym": "CNR",
+   "title": "I want to dispute a 10 Day Notice to End Tenancy Issued for Unpaid Rent or Utilities",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "209": {
+   "acronym": "MNRT",
+   "title": "I want to be paid back for the cost of emergency repairs that I made during the tenancy",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "210": {
+   "acronym": "MNDCT",
+   "title": "I want compensation for my monetary loss or other money owed",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "211": {
+   "acronym": "MNSD",
+   "title": "I want part or all of my security deposit and/or pet damage deposit back",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "past"
+  },
+  "212": {
+   "acronym": "OLC",
+   "title": "I want the landlord to comply with the Act, regulation and/or the tenancy agreement",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "213": {
+   "acronym": "ERP",
+   "title": "I need the landlord to make emergency repairs for health or safety reasons.  I have contacted the landlord to make repairs but they have not been completed",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "214": {
+   "acronym": "RP",
+   "title": "I want repairs made to the unit, site or property.  I have contacted the landlord in writing to make repairs but they have not been completed",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "215": {
+   "acronym": "PSF",
+   "title": "I want the landlord to provide services or facilities required by the tenancy agreement or law",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "216": {
+   "acronym": "RPP",
+   "title": "I want the landlord to return my personal property",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "217": {
+   "acronym": "LRE",
+   "title": "I want to suspend or set conditions on the landlord's right to enter the rental unit or site",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "218": {
+   "acronym": "OPT",
+   "title": "I want to obtain an order of possession of the rental unit or site",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "219": {
+   "acronym": "AAT",
+   "title": "I want the landlord to allow access to the unit or site for me and/or my guests",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "220": {
+   "acronym": "LAT",
+   "title": "I want authorization to change the locks to the rental unit",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "221": {
+   "acronym": "AS",
+   "title": "I want to be allowed to assign or sublet and the landlord's permission has been unreasonably withheld",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "222": {
+   "acronym": "RR",
+   "title": "I want to reduce rent for repairs, services or facilities agreed upon but not provided",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "223": {
+   "acronym": "FFT",
+   "title": "I want to include a request for the landlord to pay me back for the cost of the filing fee",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "224": {
+   "acronym": "CNL-4M",
+   "title": "I want to dispute a Four Month Notice to End Tenancy for Demolition, or Conversion to Another Use",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "225": {
+   "acronym": "OT",
+   "title": "I have another issue that is not listed",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "226": {
+   "acronym": "OPN",
+   "title": "The tenant has given written notice to end the tenancy and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "227": {
+   "acronym": "OPM",
+   "title": "A mutual agreement to end the tenancy was signed and I want an order of possession",
+   "applicant": "landlord",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "230": {
+   "acronym": "CNR-MT",
+   "title": "I want to dispute a 10 Day Notice to End Tenancy Issued for Unpaid Rent or Utilities and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "231": {
+   "acronym": "CNC-MT",
+   "title": "I want to dispute a One Month Notice to End Tenancy for cause and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "232": {
+   "acronym": "CNE-MT",
+   "title": "I want to dispute a One Month Notice to End Tenancy for end of employment and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "233": {
+   "acronym": "CNL-MT",
+   "title": "I want to dispute a Two Month Notice to End Tenancy for Landlord's Use of Property and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "234": {
+   "acronym": "CNQ-MT",
+   "title": "I want to dispute a Two Month Notice to End Tenancy Issued Because the Tenant Does Not Qualify for Subsidized Rental Unit and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "235": {
+   "acronym": "CNL-4M-MT",
+   "title": "I want to dispute a Four Month Notice to End Tenancy for Demolition, or Conversion to Another Use and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "236": {
+   "acronym": "CNLC-MT",
+   "title": "I want to dispute a Twelve Month Notice to End Tenancy for Conversion of a Manufactured Home Park I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "mhpta",
+   "tenancy_status": "current"
+  },
+  "237": {
+   "acronym": "MNSDS-DR",
+   "title": "I want my security deposit returned that the landlord is retaining without cause",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "past"
+  },
+  "238": {
+   "acronym": "MNSDP-DR",
+   "title": "I want my pet damage deposit returned that the landlord is retaining without cause",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "past"
+  },
+  "239": {
+   "acronym": "MNSDB-DR",
+   "title": "I want my security and pet damage deposit returned that the landlord is retaining without cause",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "past"
+  },
+  "240": {
+   "acronym": "OJT",
+   "title": "I am occupying a room in a residential hotel and I want the Residential Tenancy Branch to determine whether they have jurisdiction over my tenancy",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "both"
+  },
+  "241": {
+   "acronym": "OFT",
+   "title": "I want an order that the tenancy has ended due to a frustrated tenancy agreement",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "242": {
+   "acronym": "CNOP",
+   "title": "The arbitrator is ordering an order of possession for the landlord on a Tenant Application",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "243": {
+   "acronym": "MNETC",
+   "title": "I want compensation because my tenancy ended as a result of a Two, Three, Four, or 12 Month Notice to End Tenancy, and the landlord has not complied with the Act or used the rental unit/site for the stated purpose",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "past"
+  },
+  "244": {
+   "acronym": "CNMN",
+   "title": "The arbitrator is granting the landlord a monetary order for unpaid rent on a tenant application",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "245": {
+   "acronym": "DRI-ARI-C",
+   "title": "I want to dispute an Additional Rent Increase for Capital Expenditures",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "246": {
+   "acronym": "MNEVC",
+   "title": "I want compensation from the landlord related to a fixed term tenancy with a requirement to vacate the rental unit at the end of the term",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "past"
+  },
+  "247": {
+   "acronym": "CNLU",
+   "title": "I want to dispute a Four Month Notice to End Tenancy for Landlord's Use of Property",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "248": {
+   "acronym": "CNLU-MT",
+   "title": "I want to dispute a Four Month Notice to End Tenancy for Landlord's Use of Property and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "249": {
+   "acronym": "CNLU-C",
+   "title": "I want to dispute a Four Month Notice to End Tenancy for Use of Property by a Caretaker, Manager or Superintendent",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "250": {
+   "acronym": "CNLU-C-MT",
+   "title": "I want to dispute a Four Month Notice to End Tenancy for Use of Property by a Caretaker, Manager or Superintendent and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "251": {
+   "acronym": "CNLU-P",
+   "title": "I want to dispute a Three Month Notice to End Tenancy for Purchaser's Use of Property",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "252": {
+   "acronym": "CNLU-P-MT",
+   "title": "I want to dispute a Three Month Notice to End Tenancy for Purchaser's Use of Property and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "253": {
+   "acronym": "CNLU-3M",
+   "title": "I want to dispute a Three Month Notice to End Tenancy for Landlord's Use of Property",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "254": {
+   "acronym": "CNLU-3M-MT",
+   "title": "I want to dispute a Three Month Notice to End Tenancy for Landlord's Use of Property and I need more time to dispute this notice",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  },
+  "255": {
+   "acronym": "SMNL",
+   "title": "The parties agreed the Tenant will pay compensation to the Landlord",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "256": {
+   "acronym": "SOPL",
+   "title": "The parties agreed the Tenant will give occupancy of the rental unit or site to the Landlord",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "current"
+  },
+  "257": {
+   "acronym": "SOTHL",
+   "title": "The parties agreed that the Tenant will comply with the Landlord's requested terms",
+   "applicant": "tenant",
+   "act": "both",
+   "tenancy_status": "both"
+  },
+  "258": {
+   "acronym": "CNLRSD",
+   "title": "Landlord to Retain the Security Deposit",
+   "applicant": "tenant",
+   "act": "rta",
+   "tenancy_status": "current"
+  }
+ }
+}

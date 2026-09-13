@@ -1,0 +1,17 @@
+[project]
+name = "rtb-harvest"
+version = "1.0.0"
+description = "Monthly harvest of BC Residential Tenancy Branch posted decision metadata"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "pyarrow>=16",
+    "requests>=2.31",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
