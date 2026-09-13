@@ -56,18 +56,32 @@ def test_under_collection_fails_census(tmp_path, records, client_for):
     assert not (tmp_path / "data/decisions.parquet").exists()
 
 
-def test_corrupted_facet_mapping_fails(tmp_path, records, client_for, monkeypatch):
-    """Swap DisputeProcess and TenancyEnded, the kind of mapping error that once returned
-    21,694 of 45,728 records. Census and paging agree with each other, so the run must
-    still fail on the database total and the per-record facet check."""
+def test_swapped_facet_parameters_fail_on_coverage(tmp_path, records, client_for, monkeypatch):
+    """Swap the DisputeProcess and TenancyEnded parameter names, the kind of mapping error
+    that once returned 21,694 of 45,728 records. Census and paging still agree with each
+    other, so the run must fail on coverage of total_database_records."""
     def swapped(self):
         return {"DisputeType": self.dispute_type, "DisputeSubType": self.dispute_sub_type,
                 "DisputeProcess": self.tenancy_ended, "TenancyEnded": self.dispute_process}
     monkeypatch.setattr(Combo, "params", property(swapped))
     code, status, _ = do_run(tmp_path, client_for(records))
     assert code == 1
-    assert any("total_database_records" in e for e in status["errors"])
-    assert any("disagree with the query facets" in e for e in status["errors"])
+    assert any("total_database_records" in e for e in status["errors"]), status["errors"]
+    assert not (tmp_path / "data/decisions.parquet").exists()
+
+
+def test_inverted_facet_values_fail_on_record_facets(tmp_path, records, client_for, monkeypatch):
+    """Invert the DisputeProcess values. Every record is still collected exactly once and the
+    census reconciles, but every participatory decision would be labelled direct request.
+    Only the per-record facet check can see this."""
+    def inverted(self):
+        return {"DisputeType": self.dispute_type, "DisputeSubType": self.dispute_sub_type,
+                "DisputeProcess": 3 - self.dispute_process, "TenancyEnded": self.tenancy_ended}
+    monkeypatch.setattr(Combo, "params", property(inverted))
+    code, status, _ = do_run(tmp_path, client_for(records))
+    assert code == 1
+    assert not any("Census mismatch" in e for e in status["errors"])
+    assert any("disagree with the query facets" in e for e in status["errors"]), status["errors"]
     assert not (tmp_path / "data/decisions.parquet").exists()
 
 

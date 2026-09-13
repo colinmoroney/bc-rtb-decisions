@@ -71,7 +71,8 @@ def main(argv: list[str] | None = None, client=None, now: datetime | None = None
     checks.census_reconciliation(harvests, result)
     checks.facet_consistency(harvests, result)
     checks.cross_combo_duplicates(harvests, result)
-    checks.database_total_reconciliation(client.database_total, harvests, result)
+    db_gap = checks.database_total_reconciliation(client.database_total, harvests, result,
+                                                  prev.get("outside_combinations") if prev else None)
     checks.monotonic_growth(prev_total, total, result)
     checks.plausible_delta(prev_total, prev_run_at, total, run_at, result)
     checks.unknown_enums(harvests, result)
@@ -104,6 +105,7 @@ def main(argv: list[str] | None = None, client=None, now: datetime | None = None
             "status": result.status,
             "total": total,
             "total_database_records": client.database_total,
+            "outside_combinations": db_gap,
             "combinations": [
                 {"combination": h.combo.key, **h.combo.params, "expected": h.census, "harvested": len(h.decisions)}
                 for h in harvests

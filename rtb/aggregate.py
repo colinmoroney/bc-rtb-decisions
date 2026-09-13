@@ -25,6 +25,7 @@ def outcomes_by_claim(decisions: pd.DataFrame, outcomes: pd.DataFrame) -> pd.Dat
         df.groupby(GROUP_COLUMNS + ["bucket"], observed=True).size().unstack("bucket", fill_value=0)
         .reindex(columns=BUCKETS, fill_value=0)
     )
+    counts.columns.name = None
     counts.insert(0, "n", counts.sum(axis=1))
     agg = counts.reset_index()
     agg["claim_code"] = agg["claim_code"].astype(int)

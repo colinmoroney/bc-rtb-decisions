@@ -107,21 +107,38 @@ def cross_combo_duplicates(harvests: list[ComboHarvest], result: CheckResult) ->
         result.errors.append(f"{clashes} decisions returned under more than one facet combination")
 
 
-def database_total_reconciliation(database_total: int | None, harvests: list[ComboHarvest],
-                                  result: CheckResult) -> None:
-    """The 16 combinations should partition the whole database.
+# The 16 combinations cover slightly fewer decisions than total_database_records
+# (45,434 of 45,728 on 12 Sep 2026). A wrong facet mapping loses far more than
+# this (21,694 of 45,728 in the incident that motivated these checks).
+MIN_DATABASE_COVERAGE = 0.99
 
-    This is the check that catches a wrong facet mapping that is internally
-    consistent (census and paging agree, but a value matches nothing).
+
+def database_total_reconciliation(database_total: int | None, harvests: list[ComboHarvest],
+                                  result: CheckResult, prev_gap: int | None = None) -> int | None:
+    """The 16 combinations should account for (almost) the whole database.
+
+    Catches a wrong facet mapping that is internally consistent: census and
+    paging agree, but a value matches nothing. Returns the gap for census.json.
     """
     total = sum(h.census for h in harvests)
     if database_total is None:
         result.warnings.append("API did not report total_database_records")
-    elif total != database_total:
+        return None
+    gap = database_total - total
+    coverage = total / database_total if database_total else 0.0
+    if coverage < MIN_DATABASE_COVERAGE:
         result.errors.append(
-            f"Facet combinations cover {total} decisions but the API reports "
-            f"total_database_records = {database_total} ({database_total - total:+d} unaccounted for)"
+            f"Facet combinations cover {total} of total_database_records {database_total} "
+            f"({coverage:.1%}); expected at least {MIN_DATABASE_COVERAGE:.0%}. Check the facet mapping."
         )
+    elif prev_gap is not None and gap != prev_gap:
+        result.warnings.append(
+            f"Decisions outside the 16 facet combinations changed from {prev_gap} to {gap} "
+            f"(total_database_records {database_total}, combinations {total})"
+        )
+    else:
+        result.notes.append(f"{gap} decisions in total_database_records fall outside the 16 facet combinations")
+    return gap
 
 
 def monotonic_growth(prev_total: int | None, total: int, result: CheckResult) -> None:
