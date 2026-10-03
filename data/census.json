@@ -615,6 +615,160 @@
           "harvested": 0
         }
       ]
+    },
+    {
+      "run_id": "2026-10-03T1445Z",
+      "run_at": "2026-10-03T14:45:28+00:00",
+      "status": "warn",
+      "total": 46294,
+      "total_database_records": 46591,
+      "outside_combinations": 297,
+      "combinations": [
+        {
+          "combination": "Landlord/Participatory/Home/InUnit",
+          "DisputeType": 1,
+          "DisputeSubType": 0,
+          "DisputeProcess": 1,
+          "TenancyEnded": 0,
+          "expected": 5310,
+          "harvested": 5310
+        },
+        {
+          "combination": "Landlord/Participatory/Home/MovedOut",
+          "DisputeType": 1,
+          "DisputeSubType": 0,
+          "DisputeProcess": 1,
+          "TenancyEnded": 1,
+          "expected": 7964,
+          "harvested": 7964
+        },
+        {
+          "combination": "Landlord/DirectRequest/Home/InUnit",
+          "DisputeType": 1,
+          "DisputeSubType": 0,
+          "DisputeProcess": 2,
+          "TenancyEnded": 0,
+          "expected": 9943,
+          "harvested": 9943
+        },
+        {
+          "combination": "Landlord/DirectRequest/Home/MovedOut",
+          "DisputeType": 1,
+          "DisputeSubType": 0,
+          "DisputeProcess": 2,
+          "TenancyEnded": 1,
+          "expected": 1,
+          "harvested": 1
+        },
+        {
+          "combination": "Tenant/Participatory/Home/InUnit",
+          "DisputeType": 1,
+          "DisputeSubType": 1,
+          "DisputeProcess": 1,
+          "TenancyEnded": 0,
+          "expected": 14932,
+          "harvested": 14932
+        },
+        {
+          "combination": "Tenant/Participatory/Home/MovedOut",
+          "DisputeType": 1,
+          "DisputeSubType": 1,
+          "DisputeProcess": 1,
+          "TenancyEnded": 1,
+          "expected": 5676,
+          "harvested": 5676
+        },
+        {
+          "combination": "Tenant/DirectRequest/Home/InUnit",
+          "DisputeType": 1,
+          "DisputeSubType": 1,
+          "DisputeProcess": 2,
+          "TenancyEnded": 0,
+          "expected": 0,
+          "harvested": 0
+        },
+        {
+          "combination": "Tenant/DirectRequest/Home/MovedOut",
+          "DisputeType": 1,
+          "DisputeSubType": 1,
+          "DisputeProcess": 2,
+          "TenancyEnded": 1,
+          "expected": 1483,
+          "harvested": 1483
+        },
+        {
+          "combination": "Landlord/Participatory/ManufHome/InUnit",
+          "DisputeType": 2,
+          "DisputeSubType": 0,
+          "DisputeProcess": 1,
+          "TenancyEnded": 0,
+          "expected": 209,
+          "harvested": 209
+        },
+        {
+          "combination": "Landlord/Participatory/ManufHome/MovedOut",
+          "DisputeType": 2,
+          "DisputeSubType": 0,
+          "DisputeProcess": 1,
+          "TenancyEnded": 1,
+          "expected": 11,
+          "harvested": 11
+        },
+        {
+          "combination": "Landlord/DirectRequest/ManufHome/InUnit",
+          "DisputeType": 2,
+          "DisputeSubType": 0,
+          "DisputeProcess": 2,
+          "TenancyEnded": 0,
+          "expected": 95,
+          "harvested": 95
+        },
+        {
+          "combination": "Landlord/DirectRequest/ManufHome/MovedOut",
+          "DisputeType": 2,
+          "DisputeSubType": 0,
+          "DisputeProcess": 2,
+          "TenancyEnded": 1,
+          "expected": 0,
+          "harvested": 0
+        },
+        {
+          "combination": "Tenant/Participatory/ManufHome/InUnit",
+          "DisputeType": 2,
+          "DisputeSubType": 1,
+          "DisputeProcess": 1,
+          "TenancyEnded": 0,
+          "expected": 634,
+          "harvested": 634
+        },
+        {
+          "combination": "Tenant/Participatory/ManufHome/MovedOut",
+          "DisputeType": 2,
+          "DisputeSubType": 1,
+          "DisputeProcess": 1,
+          "TenancyEnded": 1,
+          "expected": 36,
+          "harvested": 36
+        },
+        {
+          "combination": "Tenant/DirectRequest/ManufHome/InUnit",
+          "DisputeType": 2,
+          "DisputeSubType": 1,
+          "DisputeProcess": 2,
+          "TenancyEnded": 0,
+          "expected": 0,
+          "harvested": 0
+        },
+        {
+          "combination": "Tenant/DirectRequest/ManufHome/MovedOut",
+          "DisputeType": 2,
+          "DisputeSubType": 1,
+          "DisputeProcess": 2,
+          "TenancyEnded": 1,
+          "expected": 0,
+          "harvested": 0
+        }
+      ]
     }
   ]
 }
